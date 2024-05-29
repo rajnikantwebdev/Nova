@@ -1,6 +1,7 @@
 import React from "react";
 import Slide from "../components/Slide";
 import Image from "next/image";
+import profileImg from "../../public/passport.jpg";
 
 const OurTeam = () => {
   return (
@@ -32,7 +33,8 @@ const OurTeam = () => {
           <div className="flex flex-1 justify-center gap-4">
             <div>
               <Image
-                src={"/passport.jpg"}
+                src={profileImg}
+                placeholder="blur"
                 width={200}
                 height={200}
                 alt={"profile-picture"}
