@@ -2,32 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f0efe7;
+  opacity: 1;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  overflow-x: hidden;
+  /* background-image: radial-gradient(
+    #82825c 0.30000000000000004px,
+    #e5e5f7 0.30000000000000004px
+  );
+  background-size: 6px 6px; */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.gradient-overlay {
+  width: 300px; /* Adjust size as needed */
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 149, 0, 0.6) 0%,
+    rgb(215, 37, 135) 100%
+  ); /* Orange to transparent gradient */
+  border-radius: 50%;
+  position: absolute; /* Position it on the page */
+  top: 20%; /* Adjust position as needed */
+  left: 60%;
+  filter: blur(40px);
 }
+
+.background {
+  /* Adjust colors */
+  /* Cover full viewport height */
+  background-image: url("../public/rainbow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Light Leaks (using pseudo-elements) */
+  position: relative; /* Necessary for positioning pseudo-elements */
+  border-radius: 2%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*  */
